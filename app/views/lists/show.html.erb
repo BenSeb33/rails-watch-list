@@ -2,7 +2,20 @@
 <h2><%= @list.name %></h2>
 
 <h3>
-<%= @bookmark.comment %>
+  <%= @bookmarks.each do |bookmark| %>
+    <li>
+      <% bookmark.comment %>
+    </li>
+    <li>
+      <% bookmark.movie_poster_url %>
+    </li>
+    <li>
+      <% bookmark.movie_title %>
+    </li>
+    <li>
+      <% bookmark.movie_overview %>
+    </li>
+  <% end %>
 </h3>
 
 <%= link_to "<-- Back", lists_path, class: 'btn btn-danger' %>
