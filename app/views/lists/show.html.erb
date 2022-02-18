@@ -2,12 +2,12 @@
 <h2><%= @list.name %></h2>
 
 <h3>
-  <%= @bookmarks.each do |bookmark| %>
+  <% @bookmarks.each do |bookmark| %>
     <li>
       <%= bookmark.comment %>
     </li>
     <li>
-      <%= bookmark.movie.poster_url %>
+      <%=image_tag bookmark.movie.poster_url %>
     </li>
     <li>
       <%= bookmark.movie.title %>
