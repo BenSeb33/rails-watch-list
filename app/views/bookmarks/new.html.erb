@@ -1,0 +1,10 @@
+<h1>New Bookmark</h1>
+
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment %>
+  <%= f.input :movie_id, collection: Movie.all, include_blank: false %>
+  <%= link_to "<-- Back", list_path(@list), class: 'btn btn-danger' %>
+  <%= f.button :submit, class: 'btn btn-danger' %>
+
+
+<% end %>
