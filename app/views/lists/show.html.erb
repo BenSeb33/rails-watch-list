@@ -4,16 +4,16 @@
 <h3>
   <%= @bookmarks.each do |bookmark| %>
     <li>
-      <% bookmark.comment %>
+      <%= bookmark.comment %>
     </li>
     <li>
-      <% bookmark.movie.poster_url %>
+      <%= bookmark.movie.poster_url %>
     </li>
     <li>
-      <% bookmark.movie.title %>
+      <%= bookmark.movie.title %>
     </li>
     <li>
-      <% bookmark.movie.overview %>
+      <%=bookmark.movie.overview %>
     </li>
   <% end %>
 </h3>
